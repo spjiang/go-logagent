@@ -21,7 +21,7 @@ func main() {
 	defer cli.Close()
 	// put
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
-	_, err = cli.Put(ctx, "/logagent/collect_config", `[{"path":"/Users/jiangshengping/wwwroot/spjiang/go/src/go-logagent/redis.log","topic":"redis"}]`)
+	_, err = cli.Put(ctx, "/logagent/192.168.0.101/collect_config", `[{"path":"/Users/jiangshengping/wwwroot/spjiang/go/src/go-logagent/nginx.log","topic":"nginx"}]`)
 	cancel()
 	if err != nil {
 		fmt.Printf("put to etcd failed,%v\n", err)

@@ -68,4 +68,5 @@ func main() {
 	etcd.WatchConf(etcdConfKey, newConfChan) // 哨兵发现最新的的配置信息会通知上面的通道
 	wg.Wait()
 
+	select {}
 }
