@@ -14,7 +14,7 @@ services:
       - "7001:7001"
     user: root
     volumes:
-      - "/var/docker/etcd/data:/opt/bitnami/etcd/data"
+      - "/opt/local/www/data/smartcity/docker/etcd/data:/opt/bitnami/etcd/data"
     environment:
       - "ETCD_ADVERTISE_CLIENT_URLS=http://etcd:2379"
       - "ETCD_LISTEN_CLIENT_URLS=http://0.0.0.0:2379"
